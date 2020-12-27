@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.5.1.min.js"></script>
+
+    <script>
+        //val() input içersindeki verileri bize getirir . text ise div container gibi şeylerden veri getirir.
+        $(document).ready(function (){
+
+$("button.gonderbtn").click(function () {
+
+
+    var data = $("input").val();
+
+
+    alert(data);
+})
+
+            $("#degistirBtn").click(function () {
+             $("input").val("gökhan kandemir");
+            })
+
+            $(".ilGetir").click(function () {
+               var il = $("select[name='il']").val();
+               alert(il);
+
+            });
+        })
+
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+<input type="text">
+<button class="gonderbtn">gönder</button>
+<button id="degistirBtn">değiştir</button>
+<button class="ilGetir">İl getir</button>
+<select name="il" id="">
+    <option value="istanbul">istanbul</option>
+    <option value="ankara">ankara</option>
+</select>
+
+</body>
+</html>
